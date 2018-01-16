@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fabric_path='/root/put/fabric/'
+fabric_path='/root/put/host_Report/'
 
 python2.6 ${fabric_path}salt_get_host_info.py
 
