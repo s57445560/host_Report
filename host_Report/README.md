@@ -1,34 +1,34 @@
 # 每日报表生成邮件发送
 
-需要部署到salt服务器上，如果路径不同需要修改 run.sh内的路径
-安装salt，sar命令，python的依赖包
+需要部署到salt服务器上，如果路径不同需要修改 run.sh内的路径<br>
+安装salt，sar命令，python的依赖包<br>
+<br>
+安装sar<br>
+yum install sysstat -y<br>
 
-安装sar
-yum install sysstat -y
+拷贝脚本到salt目录<br>
+<br>
+mkdir -p /srv/salt/scripts/ <br>
+cp /root/put/host_Report/check.sh /srv/salt/scripts/<br>
 
-拷贝脚本到salt目录
-
-mkdir -p /srv/salt/scripts/
-cp /root/put/host_Report/check.sh /srv/salt/scripts/
-
-设置crontab (添加)
-cronta -e
+设置crontab (添加)<br>
+cronta -e<br>
 40 23 * * * /bin/bash /root/put/host_Report/run.sh >> /tmp/salt_ip.log 2>&1
 
-阀值设置，在check.sh脚本内 修改以下变量即可，根据自己需求
-iowait=1
-cpuirq=5
-load=5
-memfree=20
-membuffer=0
-memcache=0
-IOtps=0
-IOrtps=0
-IOwtps=0
-IObread=0
-IObwrtn=0
-PPS=0
-bandwidth=0
+阀值设置，在check.sh脚本内 修改以下变量即可，根据自己需求<br>
+iowait=1<br>
+cpuirq=5<br>
+load=5<br>
+memfree=20<br>
+membuffer=0<br>
+memcache=0<br>
+IOtps=0<br>
+IOrtps=0<br>
+IOwtps=0<br>
+IObread=0<br>
+IObwrtn=0<br>
+PPS=0<br>
+bandwidth=0<br>
 
 
 
