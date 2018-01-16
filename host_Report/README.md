@@ -15,6 +15,21 @@ cp /root/put/host_Report/check.sh /srv/salt/scripts/
 cronta -e
 40 23 * * * /bin/bash /root/put/host_Report/run.sh >> /tmp/salt_ip.log 2>&1
 
+阀值设置，在check.sh脚本内 修改以下变量即可，根据自己需求
+iowait=1
+cpuirq=5
+load=5
+memfree=20
+membuffer=0
+memcache=0
+IOtps=0
+IOrtps=0
+IOwtps=0
+IObread=0
+IObwrtn=0
+PPS=0
+bandwidth=0
+
 
 
 正常情况
