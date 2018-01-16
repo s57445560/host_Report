@@ -7,3 +7,5 @@
 cronta -e
 
 40 23 * * * /bin/bash /root/put/fabric/run.sh >> /tmp/salt_ip.log 2>&1
+
+![image](https://github.com/s57445560/smctool/raw/master/host_Report/img/1.png)
