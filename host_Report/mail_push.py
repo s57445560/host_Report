@@ -34,8 +34,8 @@ sender = 'jumpserver@bitnei.cn'
 receiver = 'smc@bitnei.cn'
 #receiver = 'sunyang@transilink.com'
 smtpserver = 'smtp.exmail.qq.com' 
-username = 'jumpserver@bitnei.cn'
-password = 'Smc@z9w5'
+username = '...'
+password = '...'
 
 # Create message container - the correct MIME type is multipart/alternative. 
 msg = MIMEMultipart('alternative') 
