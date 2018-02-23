@@ -31,7 +31,7 @@ sar -q 2>/dev/null|egrep '^[0-9]'|sort -k 2 -rn|awk 'NR==1{b=$2>'$cpuirq'?$2",":
 num=`cat /proc/cpuinfo |grep processor|wc -l`
 cpunum=`echo "${num}*0.8"|bc`
 
-echo -n "load "
+echo -n "system load "
 sar -q 2>/dev/null|egrep '^[0-9]'|awk '{a[$0]=$4+$5+$6}END{for(i in a)print i,a[i]}'|sort -k7 -nr|awk 'NR==1{b=$4>'$cpunum'?$4",":$4;print $1,b,$5,$6" cpu-",'$num'}'|egrep '.'
 [[ $? == 0 ]]||echo "failed!"
 
