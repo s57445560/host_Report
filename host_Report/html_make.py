@@ -6,7 +6,7 @@ class Html_create(object):
     def __init__(self,data):
         self.ip_list = []
         self.salt_all_ip = []
-        self.head = ['ip','load','cpu iowait','cpu irq','mem free','DISK IO','Disk space','PPS','bandwidth','syslog']
+        self.head = ['ip','system load','cpu iowait','cpu irq','mem free','DISK IO','Disk space','PPS','bandwidth','syslog']
         self.data = data
         salt_ip_result = os.popen("salt-key -L")
         for i in salt_ip_result.readlines():
