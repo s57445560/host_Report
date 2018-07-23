@@ -21,7 +21,7 @@ class Html_create(object):
         self.ww(self.head,first=True)
         self.num = 0
         for k in self.salt_all_ip:
-            if k not in self.data:
+            if k not in self.data or self.data[k] in [False, 'False']::
                 self.ip_list.append(k)
                 for i in self.head[1::]:
                     self.ip_list.append('')
